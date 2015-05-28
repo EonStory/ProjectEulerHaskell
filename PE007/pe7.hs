@@ -5,7 +5,7 @@ isDivisibleBy (x:xs) y = (y `mod` x == 0) || isDivisibleBy (xs) y
 
 solve :: [Integer] -> Integer -> Integer
 solve a b
-	| length a == 2 = head a
+	| length a == 10001 = head a
 	| isDivisibleBy a b = solve a (b + 1)
 	| True = solve (b:a) (b + 1)
 
